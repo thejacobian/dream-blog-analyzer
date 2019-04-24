@@ -8,11 +8,12 @@ router.get('/', async (req, res) => {
     try {
         const users = await User.find ({});
         res.render('users/index.ejs', {
-            users: users        
+            users: users,
         });
     } catch (err) {
         res.send(err);
     }
-})
+});
+
 
 module.exports = router;

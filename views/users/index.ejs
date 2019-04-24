@@ -13,7 +13,7 @@
                 <h1>Users Index</h1>
                 <% for (let i = 0; i < users.length; i++) { %>
                     <li>
-                        <a href="/users/<%=user._id%>"><%=user.username%></a>
+                        <a href="/users/<%=users[i]._id%>"><%=users[i].username%></a>
                     </li>
                 <% } %>
             </div>
