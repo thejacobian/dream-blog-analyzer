@@ -18,7 +18,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(morgan('short'));
-app.use(requireLogin);
+// app.use(requireLogin);
 // app.use(showMessagesAndUsername);
 require('./db/db');
 
