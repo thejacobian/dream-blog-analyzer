@@ -6,8 +6,9 @@ const Dream = require('../models/dreams');
 // index route
 router.get('/', async (req, res) => {
     try {
-        res.render('index.ejs', {
-            users: users
+        const users = await User.find ({});
+        res.render('users/index.ejs', {
+            users: users        
         });
     } catch (err) {
         res.send(err);
