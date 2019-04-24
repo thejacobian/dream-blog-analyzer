@@ -16,6 +16,8 @@ router.get('/', async (req, res) => {
     };
 });
 
+
+
 // NEW ROUTE
 router.get('/new', (req, res) => {
     res.render('dreams/new.ejs')
@@ -24,7 +26,7 @@ router.get('/new', (req, res) => {
 // SHOW ROUTE
 router.get('/:id', async (req, res) => {
     try {
-        const oneDream = Dream.findById(req.params.id);
+        const oneDream = await Dream.findById(req.params.id);
         res.render('dreams/show.ejs', {
             dream: oneDream
         })
