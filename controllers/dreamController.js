@@ -16,6 +16,11 @@ router.get('/', async (req, res) => {
     };
 });
 
+// NEW ROUTE
+router.get('/new', (req, res) => {
+    res.render('dreams/new.ejs')
+});
+
 // SHOW ROUTE
 router.get('/:id', async (req, res) => {
     try {
@@ -28,12 +33,19 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-// NEW ROUTE
-router.get('/new', (req, res) => {
-    res.render('dreams/new.ejs')
-});
+
 
 // CREATE ROUTE
+router.post('/', (req, res) => {
+    Dream.create(req.body, (err, newDream) => {
+        if(err){
+            res.send(err)
+        }else{
+            console.log(newDream);
+            res.redirect('/dreams')
+        }
+    }); 
+});
 
 // EDIT ROUTE
 router.get('/:id/edit', (req, res) => {
