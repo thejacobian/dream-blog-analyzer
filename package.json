@@ -3,18 +3,7 @@
   "version": "1.0.0",
   "description": "Concept: Users can input their dreams in the morning and receive quick keyword based insights.",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thejacobian/dream-blog-analyzer.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thejacobian/dream-blog-analyzer/issues"
+
   },
   "homepage": "https://github.com/thejacobian/dream-blog-analyzer#readme",
   "dependencies": {
